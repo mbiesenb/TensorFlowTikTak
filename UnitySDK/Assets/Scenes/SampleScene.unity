@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -524,9 +524,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 136077687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a33e2f5bd5a8b4f82d9665e754907e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfdbf97c9526aa745b8a8d471a685bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  sensorSuite: {fileID: 791006753}
 --- !u!4 &137992189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4955732621881618, guid: 6d462bfe5acb5b54fae95360e8bff9cc,
@@ -728,9 +736,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 244000406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a33e2f5bd5a8b4f82d9665e754907e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfdbf97c9526aa745b8a8d471a685bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  sensorSuite: {fileID: 572423055}
 --- !u!1 &256344260
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,9 +849,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 275968708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a33e2f5bd5a8b4f82d9665e754907e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfdbf97c9526aa745b8a8d471a685bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  sensorSuite: {fileID: 1925617461}
 --- !u!1 &276414371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,6 +1225,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &413054767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
+  m_Name: (Clone)
+  m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
 --- !u!1 &474233018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,9 +1311,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 474233018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a33e2f5bd5a8b4f82d9665e754907e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfdbf97c9526aa745b8a8d471a685bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  sensorSuite: {fileID: 360159561}
 --- !u!1001 &482074676
 Prefab:
   m_ObjectHideFlags: 0
@@ -1749,19 +1793,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &719891849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
-  m_Name: (Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  brain: {fileID: 0}
 --- !u!1 &730242167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,6 +2458,29 @@ Transform:
   m_Father: {fileID: 1963784688}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &973162520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
+  m_Name: (Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  graphModel: {fileID: 4900000, guid: a56a193bc20d11f4ca52dcec2d3461f2, type: 3}
+  graphScope: 
+  graphPlaceholders: []
+  BatchSizePlaceholderName: batch_size
+  VectorObservationPlacholderName: vector_observation
+  RecurrentInPlaceholderName: recurrent_in
+  RecurrentOutPlaceholderName: recurrent_out
+  VisualObservationPlaceholderName: []
+  ActionPlaceholderName: action
+  PreviousActionPlaceholderName: prev_action
+  brain: {fileID: 2145008055}
 --- !u!1 &982128523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,29 +2541,6 @@ Transform:
   m_Father: {fileID: 1925617462}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1022752105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
-  m_Name: (Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  graphModel: {fileID: 0}
-  graphScope: 
-  graphPlaceholders: []
-  BatchSizePlaceholderName: batch_size
-  VectorObservationPlacholderName: vector_observation
-  RecurrentInPlaceholderName: recurrent_in
-  RecurrentOutPlaceholderName: recurrent_out
-  VisualObservationPlaceholderName: []
-  ActionPlaceholderName: action
-  PreviousActionPlaceholderName: prev_action
-  brain: {fileID: 0}
 --- !u!1 &1025404561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,9 +2615,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1025404561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a33e2f5bd5a8b4f82d9665e754907e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfdbf97c9526aa745b8a8d471a685bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  sensorSuite: {fileID: 1163485275}
 --- !u!1 &1101677272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,9 +2756,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1105636864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a33e2f5bd5a8b4f82d9665e754907e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfdbf97c9526aa745b8a8d471a685bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  sensorSuite: {fileID: 1963784687}
 --- !u!1 &1107677516
 GameObject:
   m_ObjectHideFlags: 0
@@ -3187,9 +3234,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1273383280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a33e2f5bd5a8b4f82d9665e754907e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfdbf97c9526aa745b8a8d471a685bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  sensorSuite: {fileID: 1767872613}
 --- !u!1 &1321840066
 GameObject:
   m_ObjectHideFlags: 0
@@ -3347,9 +3402,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1349684341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a33e2f5bd5a8b4f82d9665e754907e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfdbf97c9526aa745b8a8d471a685bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  sensorSuite: {fileID: 1939938788}
 --- !u!1 &1369819285
 GameObject:
   m_ObjectHideFlags: 0
@@ -3646,9 +3709,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1507846162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50a33e2f5bd5a8b4f82d9665e754907e, type: 3}
+  m_Script: {fileID: 11500000, guid: bfdbf97c9526aa745b8a8d471a685bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 2145008055}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  sensorSuite: {fileID: 1369819285}
 --- !u!1 &1521312340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3860,18 +3931,6 @@ Transform:
   m_Father: {fileID: 572423056}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1614750213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
-  m_Name: (Clone)
-  m_EditorClassIdentifier: 
-  brain: {fileID: 2145008055}
 --- !u!1 &1650116479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,7 +4024,7 @@ Transform:
   m_Father: {fileID: 1163485276}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1747791905
+--- !u!114 &1728621822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3973,14 +4032,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
+  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
   m_Name: (Clone)
   m_EditorClassIdentifier: 
   broadcast: 1
-  keyContinuousPlayerActions: []
-  axisContinuousPlayerActions: []
-  discretePlayerActions: []
-  brain: {fileID: 2145008055}
+  brain: {fileID: 0}
 --- !u!1 &1767212640
 GameObject:
   m_ObjectHideFlags: 0
@@ -4698,6 +4754,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1945979559}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1949118376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
+  m_Name: (Clone)
+  m_EditorClassIdentifier: 
+  broadcast: 1
+  keyContinuousPlayerActions: []
+  axisContinuousPlayerActions: []
+  discretePlayerActions: []
+  brain: {fileID: 0}
 --- !u!1 &1963784687
 GameObject:
   m_ObjectHideFlags: 0
@@ -5243,18 +5315,17 @@ MonoBehaviour:
   brainParameters:
     vectorObservationSize: 6
     numStackedVectorObservations: 1
-    vectorActionSize: 04000000
+    vectorActionSize: 010000000100000001000000
     cameraResolutions: []
     vectorActionDescriptions:
     - 
     - 
     - 
-    - 
-    vectorActionSpaceType: 1
+    vectorActionSpaceType: 0
   brainType: 2
   CoreBrains:
-  - {fileID: 1747791905}
-  - {fileID: 719891849}
-  - {fileID: 1614750213}
-  - {fileID: 1022752105}
-  instanceID: 13956
+  - {fileID: 1949118376}
+  - {fileID: 1728621822}
+  - {fileID: 413054767}
+  - {fileID: 973162520}
+  instanceID: 23328
